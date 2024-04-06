@@ -1,0 +1,22 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+.title{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+.content{
+  font-size: 25px;
+  color: 'blue'; 
+}
+.buttons{
+  color: 'green'; 
+  font-size: 25px;
+  width: 150px; 
+  max-height: 125px;
+}
+.container{
+  display: flex; 
+}

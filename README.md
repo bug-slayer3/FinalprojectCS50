@@ -1,0 +1,22 @@
+# Final Project Description 
+## System of Two Linear Equations Learning Tool 
+#### Video Demo: https://youtu.be/OUWZ0_6oekk
+### Introduction 
+Systems of two linear equations is an Algebra I topic. This topic is essential for students to master, because it will help them on their future mathemathical (and maybe programming!) journey. Sadly, some students still doesn't understand this topic and face difficulties in their future math classes. Something has to be done. So, I made this tool as a helper for students and teachers. Hopefully, this tool can help a student progress in their mathematical journey.
+### A. index.html File 
+In this html file, there is no script included (a static page, basically.) This page contains the materials needed to understand the concepts of systems of two linear equations. The material also introduces two ways to solve a system of two linear equations with easy-to-understand language. (assuming basic algebra and arithmetic knowledge). 
+In a programming standpoint, the page uses and integrates LaTeX into the website. In integrating LaTex, I have to learn MathJax, a LaTex rendering software, and obviously some LaTex. I also included some of the buttons as a way to access the practice materials/resources. 
+### B. calc.html 
+In this page, students can match their answers to the solver as a verification tool. The solver tool also handles 
+equations that have no or infinite solutions. The solver uses a general formula to solve the problem. The formula isn't taught because the focus of the material is to understand and apply the techniques, not to memorize a long general formula. 
+In this page, users can input the values of a, b, c, d, e, and f according to the general form of systems of two linear equations. If needed, users can also reset the values using the Reset Values button. To display the solution, click on the Solve button. (Note: All fields have to be filled before clicking the Solve button. This is done to ensure the calculations will be valid.)
+### C. pr.html 
+In this page, users can practice their knowledge and skills. This page will generate a random system of two linear equations. The generated system of equations can be solved by the user. After the user has done the math, they can input their answer in the fields provided and get immediate feedback. Users have unlimited attempts, they just have to delete their previous answer and try again. Students can also switch problems if necessary at any point. 
+Below the submit button, users can play a music theme as backsound. The music is calming and serves as a destresser when users are working on the problem. Users can also pause the music at anytime. Users can also adjust the speed and download the audio. 
+In programming this, I implemented the concept of forms and checking in HTML using JavaScript. I also experimented and tried out the audio element in HTML in the music part of the program. I also used the Math.random function in JavaScript to make the problems different and random (first time using it). I used the while loop concept to validate my problems so it only has integer solutions (more on that later). 
+### Design Choices 
+There are two design choices that I made, which is making the random problems only has integer solutions and not to decorate the website too much. 
+I made the random problems to have integer solutions because I don't want the users to get confused about how to input their answer. I want them to understand the techniques and how to apply it, and making the solution only integers doesn't hinder that, so I decided to do just that. It also made checking the answers easier and more accurate. 
+The design of the website is made simple because this can be used as a template for teachers to innovate with the designs with their creativity. I only added some design styles to make sure that the website, even in this form, is easily readable and accesible (e.g. making buttons a little bigger.)
+### Final Thoughts
+Personally, I'm satisfied with this project and my growth when taking this course. I hope this project can be useful for education, especially in math. With a strong math education, we can change the world, through math (and programming!) for the better. 

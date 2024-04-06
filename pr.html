@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Linear Equations Practice</title>
+</head>
+
+<body>
+  <h1>Linear Equations Practice</h1>
+  <p>You can practice with randomized problems now! Just click the button to generate a new question.</p>
+  <button onclick="generateNewQuestion()">Generate New Question</button>
+  <div id="questionArea"></div>
+
+  <script>
+    function random(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    let currentProblem;
+
+    function generateRandomProblem() {
+      let a, b, c, d, e, f;
+      let determinant = 0;
+      let x, y;
+
+      do {
+        a = random(-20, 20); 
+        b = random(-20, 20); 
+        c = random(-20, 20); 
+        d = random(-20, 20);
+        e = random(-20, 20); 
+        f = random(-20, 20); 
+        determinant = a * e - b * d;
+        x = (c * e - b * f) / determinant;
+        y = (a * f - c * d) / determinant;
+      } while (!Number.isInteger(x) || !Number.isInteger(y) || determinant === 0);
+
+      currentProblem = { a, b, c, d, e, f, x, y };
+      return currentProblem;
+    }
+
+    function formatEquation(coefficients) {
+      const { a, b, c, d, e, f } = coefficients;
+      return `(${a}x + ${b}y = ${c})<br>(${d}x + ${e}y = ${f})`;
+    }
+
+    function generateNewQuestion() {
+      const problem = generateRandomProblem();
+      const equationText = formatEquation(problem);
+      document.getElementById("questionArea").innerHTML = `Solve the following system of linear equations:<br>${equationText}`;
+    }
+
+    function checkAnswer() {
+      const userX = parseFloat(document.getElementById("ans_x").value);
+      const userY = parseFloat(document.getElementById("ans_y").value);
+
+      const actualX = currentProblem.x;
+      const actualY = currentProblem.y;
+
+      const tolerance = 0.001;
+      //using abs fo find difference because of float type
+      //since solution is an integer, if correct, difference should be lower than 0.5, let alone 0.001
+      if (Math.abs(userX - actualX) < tolerance && Math.abs(userY - actualY) < tolerance) {
+        document.getElementById("result").textContent = "Correct! Well done.";
+      } else {
+        document.getElementById("result").textContent = "Incorrect. Try again.";
+      }
+    }
+  </script>
+  
+  <p> Input your answer in the fields below. </p>
+  <form onsubmit="checkAnswer(); return false;"> 
+    <label for="ans_x">Value of x:</label><br>
+    <input type="text" id="ans_x" name="x_value"> <br>
+    <label for="ans_y">Value of y:</label><br>
+    <input type="text" id="ans_y" name="y_value"> <br>
+    <input type="submit" value="Submit"> 
+  </form>
+  <p id="result"></p>
+  <p> Play some music (if you want!)</p>
+  <audio controls>
+    <source src="Divine Life Society (1).mp3" type="audio/mpeg">
+  </audio>
+  <div>
+  <button class= "buttons" onclick = "location.href = 'index.html'"> Back To Home </button> </div>
+</body>
+
+</html>

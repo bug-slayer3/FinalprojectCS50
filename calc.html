@@ -1,0 +1,74 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript"
+    src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+</head>
+<body>
+  <p> Remember that the general form is:</p>
+  <p> \( \begin{cases} ax + by = c \\ dx + ey = f \end{cases} \) </p>
+  <p> where a, b, c, d, e, f are integers</p>
+  <form id="equationForm">
+    <label for="a">a:</label>
+    <input type="number" id="a" name="a" required><br>
+
+    <label for="b">b:</label>
+    <input type="number" id="b" name="b" required><br>
+
+    <label for="c">c:</label>
+    <input type="number" id="c" name="c" required><br>
+
+    <label for="d">d:</label>
+    <input type="number" id="d" name="d" required><br>
+
+    <label for="e">e:</label>
+    <input type="number" id="e" name="e" required><br>
+
+    <label for="f">f:</label>
+    <input type="number" id="f" name="f" required><br>
+
+    <button type="submit">Solve</button>
+    <button type="reset">Reset Values</button>
+  </form>
+
+  <div id="solution"></div>
+
+  <script>
+    document.getElementById("equationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const a = parseInt(formData.get("a"));
+      const b = parseInt(formData.get("b"));
+      const c = parseInt(formData.get("c"));
+      const d = parseInt(formData.get("d"));
+      const e = parseInt(formData.get("e"));
+      const f = parseInt(formData.get("f"));
+      solveEquations(a, b, c, d, e, f);
+    });
+
+    function solveEquations(a, b, c, d, e, f) {
+      if (a *e - b *d  == 0 && a * e - b * d == c*e-b*f){
+        document.getElementById("solution").textContent = "Wow, the system of solutions have infinite solutions.";
+      }
+      else if (a *e - b *d  == 0) {
+        document.getElementById("solution").textContent = "This system of equations has no solutions."
+      }
+      else {
+      // Solve the system of equations here and display the solution
+      const x = (c * e - b * f) / (a * e - b * d);
+      const y = (a * f - c * d) / (a * e - b * d);
+      const solution = `The solution is (${x}, ${y})`;
+      document.getElementById("solution").textContent = solution;}
+    }
+  </script>
+  <button class= "buttons" onclick = "location.href = 'index.html'"> Back To Home </button>
+</body>
+</html>

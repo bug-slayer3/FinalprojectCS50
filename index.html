@@ -1,0 +1,65 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript"
+    src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+</head>
+
+<body>
+  <h1 class="title">Systems Of Two Linear Equations</h1>
+  <p class="content">In mathematics, we can (not always!) take two linear equations and determine their intersection point. But how will we do that? Let's find out.</p>
+  <p class="content">Let's first take a look at the general form. (It's not that bad, I promise!)</p>
+  <p> \( \begin{cases} ax + by = c \\ dx + ey = f \end{cases} \) </p>
+<p class= "content"> Not that bad, right? a, b, c, d, e, f can be any integer. Let's take a look at an example and try to solve it in different ways. </p>
+<p> \( \begin{cases} 2x + y = 5 \\ x + 2y = 7 \end{cases} \) </p>
+<p> Scared? Don't be. We will beat that problem and gain some knowledge here. Let's go to the first method. </p>
+<h2> The Substitution Method</h2>
+<p class = "content"> If you take a look at the first equation, we can arrange it so that: </p>
+  <p>\( y = 5 - 2x \)</p>
+  <p>We can "plug" in the value of \( y \) to solve for \( x \) now.</p>
+  <p>\( x + 2(5-2x) = 7 \)</p>
+  <p>\( x + 10 - 4x = 7 \)</p>
+  <p>\( -3x + 10 = 7 \)</p>
+  <p>\( -3x = -3 \)</p>
+  <p>\( x = 1 \)</p>
+  <p class="content">We also need to find \( y \), so we can plug in 1 to solve for \( y \).</p>
+  <p>\( y = 5 - 2(1) \)</p>
+  <p>\( y = 3 \)</p>
+  <p>The solution is \( (1, 3) \).</p>
+  <p class= "content"> Let's move on to the second method. </p>
+  <h2> The Elimination Method</h2>
+  <p class= "content"> When you are playing a game, "eliminate" usually means removing a player from the game. In math, it's exactly the same, just with variables. </p>
+  <p class= "content"> Let's say you have an ex (get it?) and you want to eliminate him/her. You can do that in math. Watch and learn. </p>
+  <p> \( \begin{cases} 2x + y = 5 \\ x + 2y = 7 \end{cases} \) </p>
+  <p class= "content"> Look at the second equation. We can multiply it by 2 so it becomes:</p>
+  <p> \( \begin{cases} 2x + y = 5 \\ x + 2y = 7 \end{cases} \) </p>
+  <p class= "content"> You can multiply the second equation by 2. </p>
+  <p> \( \begin{cases} 2x + y = 5 \\ 2x + 4y = 14 \end{cases} \) </p>
+  <p class= "content"> Subtract the second equation from the first equation. You will find that x is gone. </p>
+  <p> \(-3y = -9\)</p>
+  <p> \(y = 3\)</p>
+  <p class= "content"> Now, plug the value of y to the first/second equation (up to you!)</p>
+  <p> \(2x+3 = 5\)</p>
+  <p> \(2x = 2\)</p>
+  <p> \(x = 1\)</p>
+  <p class= "content"> We find the same solution, which is (1, 3).</p>
+  <p> Both method works and are equally good, so choose whatever you want!</p>
+  <p> If you have a graphing calculator/software, you can 
+  also graph the equations and find the intersection. </p>
+  <p> You may find practice resources below.</p>
+  <div class= 'container'>
+    <button class= "buttons" onclick = "location.href= 'calc.html'"> Solver </button>
+  <button class= "buttons" onclick = "location.href = 'pr.html'"> Practice Software </button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
